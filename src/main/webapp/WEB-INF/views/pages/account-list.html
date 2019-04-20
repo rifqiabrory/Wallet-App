@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{dashboard}">
+<head>
+<title>Customer</title>
+</head>
+<body>
+	<div data-layout-fragment="content">
+<!-- 		<p>Current time is <i data-th-text="${serverTime}"></i></p> -->
+<!-- 			<p data-th-text="${message}"></p> -->
+		<div class="row purchace-popup">
+           <div class="col-12">    
+               <span class="d-block d-md-flex align-items-center">
+                  <button type="button" class="btn btn-primary btn-fw">
+                  	Create New
+                  </button>
+               </span>
+           </div>
+        </div>
+		<div class="row">
+			<div class="col-lg-12 grid-margin stretch-card">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">Customers</h4>
+						<p class="card-description">
+							List of Your Accounts
+						</p>
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>Account No.</th>
+										<th>Account Name</th>
+										<th>Open Date</th>
+										<th>Balance</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-th-each="row : ${data}">
+										<td data-th-text="${row.accountNumber}"></td>
+										<td data-th-text="${row.accountName}"></td>
+										<td data-th-text="${row.openDate}"></td>
+										<td data-th-text="${row.balance}"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

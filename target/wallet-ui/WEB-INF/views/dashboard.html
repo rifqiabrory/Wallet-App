@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title data-layout-title-pattern="$LAYOUT_TITLE | $CONTENT_TITLE">Dashboard</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" th:href="@{resources/vendors/iconfonts/mdi/css/materialdesignicons.min.css}">
+  <link rel="stylesheet" th:href="@{resources/vendors/css/vendor.bundle.base.css}">
+  <link rel="stylesheet" th:href="@{resources/vendors/css/vendor.bundle.addons.css}">
+  <link rel="stylesheet" th:href="@{resources/vendors/iconfonts/font-awesome/css/font-awesome.css}">
+  <!-- inject:css -->
+  <link rel="stylesheet" th:href="@{resources/css/style.css}">
+  <!-- endinject -->
+  <link rel="shortcut icon" th:href="@{resources/images/favicon.ico}" />
+</head>
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_header.html -->
+    <div data-th-replace="partials/_header::header"></div>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <div data-th-replace="partials/_sidebar::sidebar"></div>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+         	<div data-layout-fragment="content"></div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <div data-th-replace="partials/_footer::footer"></div>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script  th:src="@{resources/vendors/js/vendor.bundle.base.js}"></script>
+  <script  th:src="@{resources/vendors/js/vendor.bundle.addons.js}"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script th:src="@{resources/js/off-canvas.js}"></script>
+  <script th:src="@{resources/js/misc.js}"></script>
+  <script th:src="@{resources/js/dashboard.js}"></script>
+  <!-- endinject -->
+</body>
+</html>
